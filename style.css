@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300&family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #05070c;
+	--white: #f1f1f1;
+	--pink: #EC4899;
+	--purple: #ab8af8;
+	--light: #EEE;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: black;
+	margin-bottom: 1rem;
+	
+}
+
+
+#new-task-form {
+	display: flex;
+	
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1.5rem;
+	border-radius: .5rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+#new-task-input::placeholder {
+	color: var(--light);
+	opacity: .8;
+}
+
+
+#new-task-submit {
+	width: auto;
+	height: inherit;
+	color: var(--white);
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding: 1.5rem;
+	cursor: pointer;
+	transition: 0.4s;
+	/*background-color: var(--darker);*/
+	background-color: blue;
+	border-radius: .4rem;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+	pointer-events: auto;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--darkest);
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: .5rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: var(--purple);
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+
+
+.task .actions .delete {
+	color: crimson;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
